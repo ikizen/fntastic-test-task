@@ -13,6 +13,7 @@ import {
     faMessage,
     faInbox,
     faCircleQuestion,
+    faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
 import { Dialog, Tooltip } from "@material-tailwind/react";
@@ -278,28 +279,57 @@ function App() {
                         <div className="h-[1px] bg-[#20222573]"></div>
 
                         <div className="flex flex-row">
-                            <div>
-                                <div className="relative text-gray-600 focus-within:text-gray-400">
-                                    {/* <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                                        <button
-                                            type="submit"
-                                            className="p-1 focus:outline-none focus:shadow-outline"
-                                        >
-                                            f
-                                        </button>
-                                    </span> */}
-                                    <input
-                                        type="search"
-                                        className="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900"
-                                        placeholder="Search..."
-                                        // autocomplete="off"
-                                    />
+                            <div className="grow py-2 px-3 text-[9px] text-[#6d6f73]">
+                                <div className="grow">
+                                    <div className="relative content-center text-[#6d6f73]">
+                                        <input
+                                            type="text"
+                                            className="w-full rounded-sm form-input placeholder-[#6d6f73] appearance-none  bg-[#202225] border-1 px-2 py-[1px] border-[#202225] text-[9px] focus:outline-none"
+                                            placeholder="Поиск"
+                                        />
+                                        <FontAwesomeIcon
+                                            icon={faMagnifyingGlass}
+                                            size="sm"
+                                            className="pointer-events-none absolute right-1.5 top-1"
+                                        />
+                                    </div>
                                 </div>
-                                <div>
-                                    <input type="search" />
+                                <div className="my-3">В сети - 2</div>
+                                <button className="border-t-[0.5px] border-[#40444b] rounded p-1 hover:bg-[#40444b]">
+                                    <button className="flex flex-row justify-between">
+                                        <button className="flex flex-row  rounded-sm items-center">
+                                            <div className="flex items-end rounded-full justify-end w-3.5 h-3.5 bg-cover  bg-center bg-[url('../public/face.jpg')]">
+                                                <FontAwesomeIcon
+                                                    icon={faCircle}
+                                                    className="text-[3.5px] text-[#3ba55d] border-[#3ba55d] rounded-full border-[1.5px]"
+                                                    size="xs"
+                                                />
+                                            </div>
+                                            <div className="flex flex-col pl-1">
+                                                <div className="h-3 text-white font-bold pr-[3px]">
+                                                    Aidyn Sairan
+                                                </div>
+                                                <div className="h-3 self-start align-top text-[6px]">
+                                                    #9903
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <div className="justify-self-end">
+                                            helle
+                                        </div>
+                                    </button>
+                                </button>
+                            </div>
+                            <div className="flex flex-col basis-3/12 w-250 p-2 text-white text-[10px]">
+                                <div>Активные контакты</div>
+                                <div className="flex flex-col text-center">
+                                    <div className="">Пока что тут тихо</div>
+                                    <div>
+                                        Если ваш друг начнет чем то заниматься
+                                        то вы увидите это здесь
+                                    </div>
                                 </div>
                             </div>
-                            <div></div>
                         </div>
                     </main>
                 </div>
