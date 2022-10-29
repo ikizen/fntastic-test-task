@@ -1,8 +1,17 @@
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
-import { Tooltip } from "@material-tailwind/react";
+import {
+    faUser,
+    faRocket,
+    faPlus,
+    faXmark,
+    faCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
+import { Dialog, Tooltip } from "@material-tailwind/react";
 import { ThemeProvider } from "@material-tailwind/react";
+import Search from "./components/Search";
 
 function App() {
     const theme = {
@@ -22,7 +31,7 @@ function App() {
     };
     return (
         <ThemeProvider value={theme}>
-            <div className="flex flex-row min-h-screen">
+            <div className="flex flex-row min-h-screen w-full text-xs">
                 <nav className="bg-[#202225] pt-2">
                     <ul>
                         <div className="mb-1">
@@ -74,8 +83,79 @@ function App() {
                         <div></div>
                     </ul>
                 </nav>
-                <div className="flex flex-row">
-                    <div className="bg-[#2f3136] w-[240px]">search bar</div>
+                <div className="flex flex-row grow ">
+                    <div className="flex flex-col content-between bg-[#2f3136] w-[140px] text-[#96989d]">
+                        <div>
+                            <Search />
+                            <div className="grow h-[1px] bg-[#202225]"></div>
+                            <div className="flex p-1 flex-col">
+                                <button className="flex flex-row items-center hover:text-white text-[10px] p-1 mb-[2px] hover:rounded-sm hover:bg-[#42464d] grow">
+                                    <FontAwesomeIcon
+                                        icon={faUser}
+                                        className="px-1 "
+                                        size="md"
+                                    />
+                                    <div className="flex grow px-1">Друзья</div>
+                                </button>
+                                <button className="flex flex-row items-center text-[10px] py-1 px-1 hover:rounded-sm hover:bg-[#42464d] hover:text-white grow">
+                                    <FontAwesomeIcon
+                                        icon={faRocket}
+                                        className="px-1 "
+                                        size="md"
+                                    />
+                                    <div className="flex grow px-1">Nitro</div>
+                                </button>
+                                <div className="flex flex-row p-1 text-[8px] text-[#96989d] items-center justify-between">
+                                    <div className=" hover:text-white px-[2px]">
+                                        Личные сообщения
+                                    </div>
+                                    <button className="flex justify-self-end px-2">
+                                        <Tooltip
+                                            value={theme}
+                                            // className={theme}
+                                            content="Создать ЛС"
+                                            placement="top"
+                                        >
+                                            <FontAwesomeIcon
+                                                // icon="fa-solid fa-user-group"
+                                                icon={faPlus}
+                                                className="hover:text-white"
+                                                size="lg"
+                                            />
+                                        </Tooltip>
+                                    </button>
+                                </div>
+                                <div className="flex text-[10px]">
+                                    <button className="grow group flex flex-row p-1 rounded-sm hover:bg-[#42464d] hover:text-white items-center justify-between">
+                                        <div className="flex flex-row">
+                                            <div className="flex items-end rounded-full justify-end w-4 h-4 bg-cover  bg-center bg-[url('../public/face.jpg')]">
+                                                <Tooltip
+                                                    content="Не в сети"
+                                                    placement="top"
+                                                >
+                                                    <FontAwesomeIcon
+                                                        icon={faCircle}
+                                                        className="text-[3.5px] text-[#2f3136] border-[#96989d] rounded-full border-[1.5px]"
+                                                        size="xs"
+                                                    />
+                                                </Tooltip>
+                                            </div>
+
+                                            <div className="px-1">
+                                                Aidyn Sairan
+                                            </div>
+                                        </div>
+                                        <FontAwesomeIcon
+                                            icon={faXmark}
+                                            className="px-1 invisible group-hover:visible text-[8px]"
+                                            size="sm"
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-[#292b2f]">hello</div>
+                    </div>
                     <main className="flex flex-grow bg-[#36393f] ">
                         main
                         <nav>
