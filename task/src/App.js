@@ -7,6 +7,12 @@ import {
     faPlus,
     faXmark,
     faCircle,
+    faMicrophone,
+    faHeadphones,
+    faGear,
+    faMessage,
+    faInbox,
+    faCircleQuestion,
 } from "@fortawesome/free-solid-svg-icons";
 import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
 import { Dialog, Tooltip } from "@material-tailwind/react";
@@ -83,8 +89,8 @@ function App() {
                         <div></div>
                     </ul>
                 </nav>
-                <div className="flex flex-row grow ">
-                    <div className="flex flex-col content-between bg-[#2f3136] w-[140px] text-[#96989d]">
+                <div className="flex flex-row flex-grow ">
+                    <div className="flex flex-col justify-between bg-[#2f3136] w-[140px] text-[#96989d]">
                         <div>
                             <Search />
                             <div className="grow h-[1px] bg-[#202225]"></div>
@@ -154,15 +160,147 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-[#292b2f]">hello</div>
+                        <div className="flex bg-[#292b2f]">
+                            <div className="flex flex-row items-center p-1 bg-[#292b2f] text-[6px]">
+                                <button className="flex flex-row hover:bg-[#36393f] rounded-sm items-center">
+                                    <div className="flex items-end rounded-full justify-end w-3.5 h-3.5 bg-cover  bg-center bg-[url('../public/face.jpg')]">
+                                        <Tooltip
+                                            placement="top"
+                                            content="В сети"
+                                        >
+                                            <FontAwesomeIcon
+                                                icon={faCircle}
+                                                className="text-[3.5px] text-[#3ba55d] border-[#3ba55d] rounded-full border-[1.5px]"
+                                                size="xs"
+                                            />
+                                        </Tooltip>
+                                    </div>
+                                    <div className="flex flex-col pl-1">
+                                        <div className="h-3 text-white font-bold pr-[3px]">
+                                            Aidyn Sairan
+                                        </div>
+                                        <div className="h-3 self-start align-top text-[6px]">
+                                            #9903
+                                        </div>
+                                    </div>
+                                </button>
+                                <Tooltip
+                                    placement="top"
+                                    content="Выкл. микрофон"
+                                >
+                                    <button className="h-4 w-4 rounded-sm hover:bg-[#36393f]">
+                                        <FontAwesomeIcon
+                                            icon={faMicrophone}
+                                            size="md"
+                                            className="text-[10px]"
+                                        />
+                                    </button>
+                                </Tooltip>
+                                <Tooltip placement="top" content="Откл. звук">
+                                    <button className="h-4 w-4 rounded-sm hover:bg-[#36393f]">
+                                        <FontAwesomeIcon
+                                            icon={faHeadphones}
+                                            size="md"
+                                            className="text-[10px]"
+                                        />
+                                    </button>
+                                </Tooltip>
+                                <Tooltip placement="top" content="Настройки">
+                                    <button className="h-4 w-4 rounded-sm hover:bg-[#36393f]">
+                                        <FontAwesomeIcon
+                                            icon={faGear}
+                                            size="md"
+                                            className="text-[10px]"
+                                        />
+                                    </button>
+                                </Tooltip>
+                            </div>
+                        </div>
                     </div>
-                    <main className="flex flex-grow bg-[#36393f] ">
-                        main
-                        <nav>
-                            <div></div>
-                            <div></div>
+                    <main className="flex flex-col flex-grow bg-[#36393f] ">
+                        <nav className="flex flex-row h-[30px] justify-between items-center">
+                            <div className="flex flex-row px-2 gap-x-2 text-[9px] text-[#96989d] p-1 justify-between">
+                                <button className="rounded-sm hover:bg-[#454950] px-1">
+                                    В сети
+                                </button>
+                                <button className="rounded-sm hover:bg-[#454950] px-1">
+                                    Все
+                                </button>
+                                <button className="rounded-sm hover:bg-[#454950] px-1">
+                                    Ожидание
+                                </button>
+                                <button className="rounded-sm hover:bg-[#454950] px-1">
+                                    Заблокированные
+                                </button>
+                                <button className="text-white rounded-sm bg-[#2d7d46] px-1">
+                                    Добавить в друзья
+                                </button>
+                            </div>
+                            <div className="flex flex-row px-3 gap-x-3 content-center text-[#b9bbbe]">
+                                <button>
+                                    <Tooltip
+                                        placement="bottom"
+                                        content="Новый чат"
+                                        className="items-center"
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={faMessage}
+                                            size="sm"
+                                        />
+                                    </Tooltip>
+                                </button>
+                                <button>
+                                    <Tooltip
+                                        placement="bottom"
+                                        content="Почта"
+                                        className="items-center"
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={faInbox}
+                                            size="sm"
+                                        />
+                                    </Tooltip>
+                                </button>
+                                <button>
+                                    <Tooltip
+                                        placement="left"
+                                        content="Помощь"
+                                        className="items-center"
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={faCircleQuestion}
+                                            size="sm"
+                                        />
+                                    </Tooltip>
+                                </button>
+                            </div>
                         </nav>
-                        <div></div>
+                        <div className="h-[1px] bg-[#20222573]"></div>
+
+                        <div className="flex flex-row">
+                            <div>
+                                <div className="relative text-gray-600 focus-within:text-gray-400">
+                                    {/* <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                                        <button
+                                            type="submit"
+                                            className="p-1 focus:outline-none focus:shadow-outline"
+                                        >
+                                            f
+                                        </button>
+                                    </span> */}
+                                    <input
+                                        type="search"
+                                        className="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900"
+                                        placeholder="Search..."
+                                        // autocomplete="off"
+                                    />
+                                </div>
+                                <div>
+                                    <input type="search" />
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
                     </main>
                 </div>
             </div>
