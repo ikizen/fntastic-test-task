@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Dialog } from "@material-tailwind/react";
 
-export default function Example() {
+export default function Search() {
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => setOpen(!open);
@@ -11,7 +11,7 @@ export default function Example() {
             <div className="flex">
                 <button
                     onClick={handleOpen}
-                    className="text-[#96989d] text-[7px] bg-[#202225] rounded-[3px] px-[6px] flex-1 m-1 grow"
+                    className="text-[#96989d] text-[14px] bg-[#202225] rounded-[6px] py-2 px-[12px] flex-1 m-2 grow"
                 >
                     <div className="flex flex-start">
                         Найти или начать беседу
@@ -21,12 +21,12 @@ export default function Example() {
             <Dialog
                 open={open}
                 handler={handleOpen}
-                size="sm"
-                className="bg-[#2f3136] text-xs rounded-[5px] p-2"
+                size="md"
+                className="bg-[#2f3136] text-sm rounded-[10px] p-4"
             >
-                <div className="mb-4">
+                <div className="mb-8">
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-[#202225] border-none"
+                        className="shadow appearance-none border rounded w-full py-4 px-6 text-white leading-tight focus:outline-none focus:shadow-outline bg-[#202225] border-none"
                         id="username"
                         type="text"
                         placeholder="Куда отправимся?"
