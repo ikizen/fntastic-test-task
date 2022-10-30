@@ -1,7 +1,7 @@
 import "./App.css";
 import { ThemeProvider } from "@material-tailwind/react";
-import Main from "./components/main/Main";
-import Sidebar from "./components/sidebar/Sidebar";
+import Main from "./components/MainBar/Main";
+import Sidebar from "./components/SideBar/Sidebar";
 
 const theme = {
     tooltip: {
