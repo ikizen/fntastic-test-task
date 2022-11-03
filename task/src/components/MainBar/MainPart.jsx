@@ -6,9 +6,9 @@ import MainChats from "./MainChats";
 export default function MainPart() {
     return (
         <>
-            <main className="flex flex-col flex-grow bg-[#36393f] ">
+            <main className="flex flex-col flex-grow bg-mainbar">
                 <MainNavbar />
-                <div className="h-[2px] bg-[#20222573]"></div>
+                <div className="h-[2px] bg-[#8B8676]"></div>
 
                 <div className="grow flex flex-row">
                     <div className="grow py-4 px-6 text-[18px] text-[#6d6f73]">

@@ -11,7 +11,7 @@ export default function Search() {
             <div className="flex">
                 <button
                     onClick={handleOpen}
-                    className="text-[#96989d] text-[14px] bg-[#202225] rounded-[6px] py-2 px-[12px] flex-1 m-2 grow"
+                    className="text-black text-[14px] bg-sidebar rounded-[6px] py-2 px-[12px] flex-1 m-2 grow"
                 >
                     <div className="flex flex-start">
                         Найти или начать беседу
@@ -22,11 +22,11 @@ export default function Search() {
                 open={open}
                 handler={handleOpen}
                 size="md"
-                className="bg-[#2f3136] text-sm rounded-[10px] p-4"
+                className="bg-sidebar text-black text-sm rounded-[10px] p-4"
             >
                 <div className="mb-8">
                     <input
-                        className="shadow appearance-none border rounded w-full py-4 px-6 text-white leading-tight focus:outline-none focus:shadow-outline bg-[#202225] border-none"
+                        className="placeholder-black shadow appearance-none border rounded w-full py-4 px-6 leading-tight focus:outline-none focus:shadow-outline bg-searchbar border-none"
                         id="username"
                         type="text"
                         placeholder="Куда отправимся?"

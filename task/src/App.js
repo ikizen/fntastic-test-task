@@ -8,12 +8,13 @@ const theme = {
         styles: {
             base: {
                 bg: "bg-[#202225]",
-                color: "text-white",
+                color: "text-black",
                 fontSize: "text-[14px]",
                 padding: "p-2",
                 borderRadius: "rounded",
                 fontWeight: "font-bold",
                 margin: "ml-[8px]",
+                backgroundColor: "bg-[#a29364]",
             },
         },
     },

@@ -10,3 +10,23 @@
     border-bottom-right-radius: 90px;
     border-top-right-radius: 90px;
 }
+
+.general-text {
+    color: #8b8676;
+}
+
+.hovered-block {
+    background-color: #a29364;
+}
+
+.bg-sidebar {
+    background-color: #a29364;
+}
+
+.bg-searchbar {
+    background-color: #c5a648;
+}
+
+.bg-mainbar {
+    background-color: #dcb336;
+}

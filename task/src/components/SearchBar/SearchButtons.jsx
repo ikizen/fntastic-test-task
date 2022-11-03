@@ -13,12 +13,12 @@ export default function SearchButtons() {
     return (
         <>
             <div className="grow h-[2px] bg-[#202225]"></div>
-            <div className="flex p-2 flex-col">
-                <button className="flex flex-row items-center hover:text-white text-[20px] p-2 mb-[4px] hover:rounded-md hover:bg-[#42464d] grow">
+            <div className="flex p-2 flex-col text-black">
+                <button className="flex flex-row items-center text-black text-[20px] p-2 mb-[4px] hover:rounded-md hover:bg-[#a29364] grow">
                     <FontAwesomeIcon icon={faUser} className="px-2" size="lg" />
                     <div className="flex grow p-2">Друзья</div>
                 </button>
-                <button className="flex flex-row items-center text-[20px] py-2 px-2 hover:rounded-md hover:bg-[#42464d] hover:text-white grow">
+                <button className="flex flex-row items-center text-[20px] py-2 px-2 hover:rounded-md hover:bg-[#a29364] grow">
                     <FontAwesomeIcon
                         icon={faRocket}
                         className="px-2"
@@ -26,7 +26,7 @@ export default function SearchButtons() {
                     />
                     <div className="flex grow p-2">Nitro</div>
                 </button>
-                <div className="flex flex-row p-2 text-[16px] text-[#96989d] items-center justify-between">
+                <div className="flex flex-row p-2 text-[16px] text-black items-center justify-between">
                     <div className=" hover:text-white px-[4px]">
                         Личные сообщения
                     </div>
@@ -41,13 +41,13 @@ export default function SearchButtons() {
                     </button>
                 </div>
                 <div className="flex text-[20px]">
-                    <button className="grow group flex flex-row p-2 rounded-md hover:bg-[#42464d] hover:text-white items-center justify-between">
+                    <button className="grow group flex flex-row p-2 rounded-md hover:bg-[#a29364] items-center justify-between">
                         <div className="flex flex-row items-center">
                             <div className="flex items-end rounded-full justify-end w-8 h-8 bg-cover  bg-center bg-[url('../public/face.jpg')]">
                                 <Tooltip content="Не в сети" placement="top">
                                     <FontAwesomeIcon
                                         icon={faCircle}
-                                        className="text-[7px] text-[#2f3136] border-[#96989d] rounded-full border-[3px]"
+                                        className="text-[7px] text-[#c5a648] border-[#a29364] rounded-full border-[3px]"
                                         size="sm"
                                     />
                                 </Tooltip>

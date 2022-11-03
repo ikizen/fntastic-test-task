@@ -6,13 +6,13 @@ import { Tooltip } from "@material-tailwind/react";
 export default function Sidebar() {
     return (
         <>
-            <nav className="bg-[#202225] pt-4">
+            <nav className="bg-sidebar general-text pt-4">
                 <ul>
                     <div className="mb-2">
                         <Tooltip content="Личные сообщения" placement="right">
                             <div className="group/discord flex flex-row mr-2">
                                 <div className="flex self-center w-[4px] h-[8px] mr-[8px] rounded-tr-full rounded-br-full invisible bg-white group-hover/discord:h-[20px] group-hover/discord:visible"></div>
-                                <div className="flex justify-center items-center bg-[#36393f] rounded-full h-12  w-12 group-hover/discord:rounded-[22px] group-hover/discord:bg-[#5865f2]">
+                                <div className="flex justify-center items-center bg-searchbar rounded-full h-12  w-12 group-hover/discord:rounded-[22px] group-hover/discord:bg-[#5865f2]">
                                     <FontAwesomeIcon
                                         className=" rounded-full h-8 w-8 text-[#dcddde] group-hover/discord:text-white px-2"
                                         icon={faDiscord}

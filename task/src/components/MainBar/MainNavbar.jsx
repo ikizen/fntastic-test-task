@@ -11,24 +11,24 @@ export default function MainNavbar() {
     return (
         <>
             <nav className="flex flex-row h-[60px] justify-between items-center">
-                <div className="flex flex-row px-4 gap-x-4 text-[18px] text-[#96989d] p-2 justify-between">
-                    <button className="rounded-md hover:bg-[#454950] p-2">
+                <div className="flex flex-row px-4 gap-x-4 text-[18px] text-black p-2 justify-between">
+                    <button className="rounded-md hover:bg-[#a29364] p-2">
                         В сети
                     </button>
-                    <button className="rounded-md hover:bg-[#454950] px-2">
+                    <button className="rounded-md hover:bg-[#a29364] px-2">
                         Все
                     </button>
-                    <button className="rounded-md hover:bg-[#454950] px-2">
+                    <button className="rounded-md hover:bg-[#a29364] px-2">
                         Ожидание
                     </button>
-                    <button className="rounded-md hover:bg-[#454950] px-2">
+                    <button className="rounded-md hover:bg-[#a29364] px-2">
                         Заблокированные
                     </button>
                     <button className="text-white rounded-md bg-[#2d7d46] px-2">
                         Добавить в друзья
                     </button>
                 </div>
-                <div className="flex flex-row px-6 gap-x-6 content-center text-[#b9bbbe]">
+                <div className="flex flex-row px-6 gap-x-6 content-center text-black text-[17px]">
                     <button>
                         <Tooltip
                             placement="bottom"
