@@ -18,7 +18,7 @@ export default function MainPart() {
 
                     <div className="bg-[#40444b] w-[2px]"></div>
 
-                    <div className="flex flex-col basis-3/12 w-500 p-4 text-white text-[20px]">
+                    <div className="flex flex-col basis-3/12 w-500 p-4 text-black text-[20px]">
                         <div className="font-bold pt-4 pb-8">
                             Активные контакты
                         </div>
